@@ -33,6 +33,7 @@ section.hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
+  place-content: center;
   gap: 20px;
 }
 
@@ -40,6 +41,7 @@ section.hero .hero-text {
   display: flex;
   flex-direction: column;
   font-size: 1.2em;
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -53,6 +55,27 @@ section.hero .hero-text {
   margin: 0;
 }
 
+.hero-text p {
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 15px;
+  width: 40ch;
+}
+
+.hero-text p::before {
+  content: "“";
+  font-size: 2em;
+  color: #fc0db0;
+}
+
+.hero-text p::after {
+  content: "”";
+  font-size: 2em;
+  color: #fc0db0;
+}
+
 .text-accent {
   color: #fc0db0;
 }
@@ -62,9 +85,24 @@ section.hero .hero-text {
 }
 
 .hero img {
-  height: 100%;
-  max-width: 500px;
+  max-width: 400px;
   object-fit: contain;
   border-radius: 15px;
   min-width: 200px;
+  width: 100%;
+}
+
+section.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+section.skills ul li {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
 }
