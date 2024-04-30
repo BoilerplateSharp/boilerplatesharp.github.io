@@ -1,7 +1,13 @@
+:root {
+  --primary-color: #8d1cf7;
+  --accent-color: #fc0db0;
+  --background-color: #121212;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #121212;
+  background-color: var(--background-color);
 }
 
 main {
@@ -67,7 +73,7 @@ section.hero .hero-text {
 .hero-text p::before {
   content: "“";
   font-size: 2em;
-  color: #fc0db0;
+  color: var(--accent-color);
 }
 
 .hero-text p::after {
@@ -92,11 +98,19 @@ section.hero .hero-text {
   width: 100%;
 }
 
+section.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 section.skills ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  gap: 5rem;
+  justify-content: center;
 }
 
 section.skills ul li {
@@ -105,4 +119,26 @@ section.skills ul li {
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+}
+
+section.skills ul li .skill-shadow {
+  background-color: rgba(100, 100, 100, 0.7);
+  border-radius: 1rem;
+}
+
+section.skills ul li .skill-bar {
+  background-color: red;
+  border-radius: 1rem;
+  width: 90%;
+  font-style: italic;
+  padding: 1rem 0;
+  font-size: 1.3em;
+}
+
+.skill-bar span.value {
+  margin-left: 1rem;
+}
+
+.skill-bar span.value::after {
+  content: " %";
 }
