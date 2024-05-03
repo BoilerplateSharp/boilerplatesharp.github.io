@@ -274,6 +274,7 @@ section.projects {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 section.projects ul {
@@ -327,4 +328,96 @@ section.projects ul li a {
 section.projects ul li:hover {
   box-shadow: 6px 6px 20px var(--accent-color);
   transform: translateY(-1rem) translateX(0.5rem);
+}
+
+/* Media-Queries */
+@media screen and (max-width: 900px) {
+  section.hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+  }
+
+  section.hero .hero-text {
+    font-size: 0.9em;
+    height: 100%;
+    justify-content: end;
+  }
+
+  /* ul.nav#id {
+
+  }
+  let myNavlinkElem = document.querySelector('ul.nav#id') */
+
+  section.hero .hero-text p {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 55ch;
+  }
+
+  section.hero .hero-text h1 {
+    margin: 0;
+  }
+
+  section.hero img {
+    height: 100%;
+  }
+
+  section.skills ul {
+    margin-top: 0;
+    gap: 1rem;
+    /* transform: scale(0.8); */
+  }
+  section.skills ul li {
+    width: 80%;
+  }
+  section.timeline {
+    padding: 0.6rem;
+    justify-content: end;
+  }
+  section.timeline h2.timeline-title {
+    margin: 0;
+  }
+  section.timeline ul.timeline-items {
+    max-width: fit-content;
+  }
+  .timeline-content p {
+    max-width: 30vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  ul.timeline-items li:nth-child(odd) .timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  /* Project Mobile Section */
+  section.projects ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  section.projects ul li {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    width: 90%;
+    flex-basis: auto;
+    max-height: 25vh;
+  }
+  section.projects ul li .card-content {
+    display: flex;
+    flex-direction: column;
+  }
+  section.projects ul li img {
+    width: auto;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
+  section.projects ul li .card-content a {
+    margin-top: auto;
+    margin-bottom: 0.3rem;
+    align-self: start;
+  }
 }
